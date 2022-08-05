@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JS demo</title>
+	<!-- my CSS  -->
+	<link href="cssFolder/style.css" rel="stylesheet" >
+	
+	<!-- javascript -->
+	<script type="text/javascript">
+		//javascript goes here inside script tags
+		
+		document.write("<h1>Hello Page 2</h1>"); //using HTML tags
+		//Code from w3schools
+		//Call funtion myCat
+		function myCat(){
+			//get eletment by id CatDog and display dog
+			document.getElementById("catDog").src= "cat.jpg"
+			//
+		}
+		//Code from w3schools
+		//Call funtion myCat
+		function myDog(){
+			//get eletment by id CatDog and display dog
+			document.getElementById("catDog").src= "dog.jpg"
+			
+		}
+
+
+
+		
+	</script>
+  </head>
+  <body>
+  	  	<div class="nCheck">
+
+	<h2>Check Cat and Dog</h2>
+	<!-- i know the i should edit the size of the catDog in a app but this is just to show how to manipulate js-->
+	<img id="catDog" src="" style="width:200px">
+	<br>
+	<button onclick="myCat()"> Check Cat </button>
+	<button onclick="myDog()"> Check Dog </button>
+</div>
+
+
+
+	<br>	<br>
+
+
+
+<!-- Lights on and off, code from w3schools -->
+<h2>Turn light ON and OFF</h2>
+<button onclick="document.getElementById('myImage').src='bulbOn.gif'">Turn on the light</button>
+
+<!-- Free picture from pexels-->
+<img id="myImage" src="bulbOff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='bulbOff.gif'">Turn off the light</button>
+	<br> 	<br> 	<br>
+
+
+
+
+
+
+
+
+
+
+
+	<a href="page1.html">Page 1</a>
+	
+  </body>
+</html>

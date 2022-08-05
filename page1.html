@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JS demo</title>
+	<!-- my CSS  -->
+	<link href="cssFolder/style.css" rel="stylesheet" >
+	
+	<!-- javascript -->
+	<script type="text/javascript">
+		//javascript goes here inside script tags
+		//document.write("Hi"); //write direct to webpage
+		document.write("<h1>Hello World!</h1>"); //using HTML tags
+		//Code from w3schools
+		//call function myFunction
+		function myFunction(){
+			//declare var n and asign the value of text
+			var n= document.getElementById("text").value;
+			//get document by id and display phrase + var.
+  			document.getElementById("displayPhrase").innerHTML ="Hello "+ n + " how are you? If you want to check the date click on the Check Date button bellow" ;
+		}
+		//Code from w3schools
+		//call function myFunction
+		function myDateTime(){
+			//declare var n and asign the value of text
+			var dateAndTime= Date();
+			//get document by id and display phrase + var.
+  			document.getElementById("displayDate").innerHTML ="The Date is "+ dateAndTime ;
+		}
+
+
+			// Code from https://www.geeksforgeeks.org/number-guessing-game-using-javascript/
+			// declare and asign guess variable.
+		   var guess = 1;      
+		   //start function myGame
+		function myGame(){
+			// Random value generated
+			var y= Math.floor(Math.random() *10+1);
+			// counting the number of guesses
+    		// made for correct Guess
+			// number guessed by user     
+		   var x = document.getElementById("guessField").value;
+		  
+		   if(x == y)
+		   {    
+		       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+		               + guess + " GUESS , THE RANDOM NUMBER WAS "+ y) ;
+		   }
+		   else if(x > y) /* if guessed number is greater
+		                   than actual number*/ 
+		   {    
+		       guess++;
+		       alert("OOPS SORRY!! TRY A SMALLER NUMBER, THE RANDOM NUMBER WAS "+ y);
+		   }
+		   else
+		   {
+		       guess++;
+		       alert("OOPS SORRY!! TRY A GREATER NUMBER , THE RANDOM NUMBER WAS " + y)
+		   }
+		}      
+
+		
+	</script>
+  </head>
+  <body>
+  	<div class="nCheck">
+		<h2>Name Check</h2>
+		<label for="guessField"> Enter your name</label>
+
+		<input type="text" id="text" value="">
+		<button onclick="myFunction()"> Send </button>
+		<p id="displayPhrase"></p>
+	</div>
+	
+
+	<h2>Date Check</h2>
+	<button onclick="myDateTime()"> Check Date </button>
+	<p id="displayDate"></p>
+
+	<div class="form">
+		<h2>Guessing Game</h2>
+		<label for="guessField"> Guess between 1 to 10</label>
+		<input type="text" id="guessField" class="guessField">
+		<input type="submit" onclick="myGame()" value="submitGuess" class="guessSubmit" id="submitGuess">
+	</div>
+
+
+<br>
+	<div class="anc">
+		<a href="page2.html">Page 2</a>
+	</div>
+
+	
+  </body>
+</html>
